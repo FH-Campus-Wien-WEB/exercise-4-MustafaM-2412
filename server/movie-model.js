@@ -13,8 +13,7 @@ function getUserMovies(username) {
 }
 
 function getUserMovie(username, imdbID) {
-  const userMovies = getUserMovies(username);
-  return userMovies[imdbID];
+  return getUserMovies(username)[imdbID];
 }
 
 function hasUserMovie(username, imdbID) {
@@ -22,26 +21,27 @@ function hasUserMovie(username, imdbID) {
 }
 
 function setUserMovie(username, imdbID, movie) {
-  if (!movies[username]) {
-    movies[username] = {};
-  }
-  const exists = imdbID in movies[username];
+  if (!movies[username]) movies[username] = {};
   movies[username][imdbID] = movie;
   saveMovies();
-  return exists;
 }
 
 function deleteUserMovie(username, imdbID) {
-  if (!movies[username] || !(imdbID in movies[username])) {
-    return false;
-  }
+  if (!movies[username] || !(imdbID in movies[username])) return false;
   delete movies[username][imdbID];
   saveMovies();
   return true;
 }
 
 function getGenres(username) {
-  return [...new Set(Object.values(getUserMovies(username)).flatMap((movie) => movie.Genres || []))];
+  const allGenres = new Set();
+  Object.values(getUserMovies(username)).forEach(movie => {
+    const genres = Array.isArray(movie.Genres)
+        ? movie.Genres
+        : (movie.Genres ? String(movie.Genres).split(", ") : []);
+    genres.forEach(g => { if (g) allGenres.add(g.trim()); });
+  });
+  return [...allGenres];
 }
 
 module.exports = {

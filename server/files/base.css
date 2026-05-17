@@ -1,20 +1,23 @@
 body {
-  font-family: "Trebuchet MS", sans-serif;
-  background-color: brown;
-  color: beige;
+    background-color: #fdfcf5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-main {
-  color: #333;
+input, select, textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 0.1rem solid #b2dfdb;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-family: inherit;
 }
 
 button {
-    padding: 4px;
-    border-width: 1px;
-    border-radius: 4px;
-    font-size: 105%;
-}
-
-button:hover {
-  background-color: darkgray;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s;
 }

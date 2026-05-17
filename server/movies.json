@@ -82,90 +82,85 @@
     }
   },
   "jane": {
-    "tt1972591": {
-      "imdbID": "tt1972591",
-      "Title": "King Arthur: Legend of the Sword",
-      "Released": "2017-05-11",
-      "Runtime": 126,
+    "tt0245429": {
+      "imdbID": "tt0245429",
+      "Title": "Spirited Away",
+      "Released": "2003-03-27",
+      "Runtime": 124,
+      "Plot": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches and spirits, and where humans are changed into beasts.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+      "Metascore": 96,
+      "imdbRating": 8.6,
       "Genres": [
-        "Action",
         "Adventure",
-        "Drama"
+        "Animation",
+        "Family"
       ],
       "Directors": [
-        "Guy Ritchie"
+        "Hayao Miyazaki",
+        "Mustafa Maksuti"
       ],
       "Writers": [
-        "Joby Harold",
-        "Guy Ritchie",
-        "Lionel Wigram"
+        "Hayao Miyazaki"
       ],
       "Actors": [
-        "Charlie Hunnam",
-        "Astrid Bergès-Frisbey",
-        "Jude Law"
-      ],
-      "Plot": "Robbed of his birthright, Arthur comes up the hard way in the back alleys of the city. But once he pulls the sword from the stone, he is forced to acknowledge his true legacy - whether he likes it or not.",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMjM3ODY3Njc5Ml5BMl5BanBnXkFtZTgwMjQ5NjM5MTI@._V1_SX300.jpg",
-      "Metascore": 41,
-      "imdbRating": 6.7
+        "Miyu Irino",
+        "Rumi Hiiragi",
+        "Mari Natsuki"
+      ]
     },
-    "tt0360717": {
-      "imdbID": "tt0360717",
-      "Title": "King Kong",
-      "Released": "2005-12-13",
-      "Runtime": 187,
+    "tt0808506": {
+      "imdbID": "tt0808506",
+      "Title": "The Girl Who Leapt Through Time",
+      "Released": "2006-07-14",
+      "Runtime": 98,
       "Genres": [
-        "Action",
+        "Animation",
         "Adventure",
-        "Romance"
+        "Comedy"
       ],
       "Directors": [
-        "Peter Jackson"
+        "Mamoru Hosoda"
       ],
       "Writers": [
-        "Fran Walsh",
-        "Philippa Boyens",
-        "Peter Jackson"
+        "Yasutaka Tsutsui",
+        "Satoko Okudera"
       ],
       "Actors": [
-        "Naomi Watts",
-        "Jack Black",
-        "Adrien Brody"
+        "Riisa Naka",
+        "Takuya Ishida",
+        "Mitsutaka Itakura"
       ],
-      "Plot": "A greedy film producer assembles a team of moviemakers and sets out for the infamous Skull Island, where they find more than just cannibalistic natives.",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMWY0NWE0ZjUtNjRlOS00ZDViLTgxNTQtMGMwN2FhNDY1YTg2XkEyXkFqcGc@._V1_SX300.jpg",
-      "Metascore": 81,
-      "imdbRating": 7.2
+      "Plot": "A high-school girl named Makoto acquires the power to travel back in time, and decides to use it for her own personal benefits. Little does she know that she is affecting the lives of others just as much as she is her own.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODE1YjEzYzYtNWVmZC00ZjU5LTgzNjgtZWRmNjhiMTVjNGU0XkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": 66,
+      "imdbRating": 7.6
     },
-    "tt0110357": {
-      "imdbID": "tt0110357",
-      "Title": "The Lion King",
-      "Released": "1994-06-23",
-      "Runtime": 88,
+    "tt16428256": {
+      "imdbID": "tt16428256",
+      "Title": "Suzume",
+      "Released": "2023-04-13",
+      "Runtime": 122,
       "Genres": [
         "Animation",
         "Adventure",
         "Drama"
       ],
       "Directors": [
-        "Roger Allers",
-        "Rob Minkoff"
+        "Makoto Shinkai"
       ],
       "Writers": [
-        "Irene Mecchi",
-        "Jonathan Roberts",
-        "Linda Woolverton"
+        "Makoto Shinkai"
       ],
       "Actors": [
-        "Matthew Broderick",
-        "Jeremy Irons",
-        "James Earl Jones"
+        "Nanoka Hara",
+        "Hokuto Matsumura",
+        "Eri Fukatsu"
       ],
-      "Plot": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_SX300.jpg",
-      "Metascore": 88,
-      "imdbRating": 8.5
+      "Plot": "A modern action adventure road story where a 17-year-old girl named Suzume helps a mysterious young man close doors from the other side that are releasing disasters all over in Japan.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BODhkNDhmNzktODFmMC00NDZiLWEzN2UtY2YwYzgzYTVlMWZmXkEyXkFqcGc@._V1_SX300.jpg",
+      "Metascore": 77,
+      "imdbRating": 7.6
     }
   }
 }

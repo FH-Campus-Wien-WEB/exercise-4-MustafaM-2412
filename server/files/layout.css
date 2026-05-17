@@ -1,80 +1,205 @@
-@import url(base.css);
+@import url('base.css');
 
-h1 {
-  font-size: 200%;
-  margin: 8px 0px;
-}
-
-html,
-body {
-  margin: 0px;
-  height: 100vh;
-}
-
-/* The nav's header and button list will be centered */
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-ul {
-  margin-top: 0px;
-  padding: 2px;
-  list-style-type: none;
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
 body {
   display: grid;
-  grid-template-rows: 92px auto 64px;
-  grid-template-columns: 192px auto;
-  grid-template-areas: "h h" "n m" "f f";
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "h"
+    "n"
+    "m"
+    "f";
+}
+
+@media (min-width: 48rem) {
+  body {
+    grid-template-columns: 16rem 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "h h"
+      "n m"
+      "f f";
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    box-shadow: 0.2rem 0 0.5rem rgba(0,0,0,0.05);
+  }
+
+  main {
+    overflow-y: auto;
+    max-height: calc(100vh - 5rem);
+  }
+}
+
+header { grid-area: h; }
+nav    { grid-area: n; }
+main   { grid-area: m; }
+footer { grid-area: f; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  border-bottom: 0.2rem solid #b2dfdb;
+  padding: 1.2rem 1.5rem;
+  background-color: #e0f2f1;
+}
+
+header h1 {
+  color: #00796b;
+  font-size: 2.5rem;
   margin: 0;
 }
 
-header {
-  grid-area: h;
+.user-greeting {
+  font-size: 0.88rem;
+  color: #00796b;
+  font-style: italic;
+  text-align: center;
 }
 
 nav {
-  grid-area: n;
+  padding: 1.2rem;
+  background-color: #f1f8e9;
+  border-right: 0.2rem solid #b2dfdb;
+}
+
+nav h2 {
+  color: #00796b;
+  font-size: 0.85rem;
+  margin: 0.8rem 0 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+nav h2:first-child {
+  margin-top: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.btn-nav {
+  width: 100%;
+  background-color: #80cbc4;
+  color: #004d40;
+  border: none;
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  display: block;
+}
+
+.btn-nav:hover {
+  background-color: #00796b;
+  color: white;
 }
 
 main {
   grid-area: m;
-  overflow-y: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
+  gap: 2rem;
+  background-color: #fdfcf5;
+  align-items: stretch;
 }
 
+@media (max-width: 75rem) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
 footer {
   grid-area: f;
+  background-color: #e0f2f1;
+  border-top: 0.2rem solid #b2dfdb;
+  font-weight: bold;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  max-height: 6rem;
+  padding: 1rem 1.5rem;
 }
 
-nav > ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 4px;
+footer.collapsed {
+  max-height: 0;
+  padding: 0 1.5rem;
 }
 
-footer > ul {
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
-  column-gap: 16px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
   justify-content: center;
+  align-items: center;
 }
 
-article h2 {
-  margin-bottom: 0px;
+footer a {
+  color: #00796b;
+  text-decoration: none;
 }
 
-/* navigation buttons have full width */
-nav button {
-  width: 100%;
+footer a:hover {
+  text-decoration: underline;
 }
 
-img {
-  border-radius: 12px;
+#footerToggle {
+  position: fixed;
+  bottom: 0.6rem;
+  right: 0.8rem;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.25);
+  z-index: 100;
+  transition: background-color 0.2s, transform 0.3s;
+  padding: 0;
 }
 
-a {
-  color: beige;
+#footerToggle:hover {
+  background-color: #004d40;
+}
+
+#footerToggle.rotated {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 48rem) {
+  nav {
+    border-right: none;
+    border-bottom: 0.2rem solid #b2dfdb;
+  }
 }
